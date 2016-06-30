@@ -1,5 +1,6 @@
 package com.example.tirocinio2.progettoso2;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -45,14 +46,15 @@ public class MainActivity extends AppCompatActivity implements OnConnectionFaile
         listview.setAdapter((ListAdapter) adapter);
     }
 
-    public void addItem (View v){
-        EditText field = (EditText) findViewById(R.id.editText);
-        String newTask = field.getText().toString();
-        makeList(new String[]{newTask});
-    }
-
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
         // Fare qualcosa se non c'è la connessione
+    }
+
+    public void zecond(View v) {
+        // definisco l'intenzione
+        Intent openPage1 = new Intent(MainActivity.this,NewTaskActivity.class);
+        // passo all'attivazione dell'activity Pagina.java
+        startActivity(openPage1);
     }
 }

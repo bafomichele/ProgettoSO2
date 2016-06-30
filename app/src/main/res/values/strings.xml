@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ProgettoSO2</string>
+
+    <string-array name="spinnerChoices">
+        <item>Per luogo specifico</item>
+        <item>Per tipo di attività</item>
+        <item>Per compito</item>
+    </string-array>
+
 </resources>
